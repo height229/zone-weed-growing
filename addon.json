@@ -1,0 +1,11 @@
+{
+	"title"		:	"Weed Growing",
+	"type"		:	"ServerContent",
+	"tags"		:	[ "Roleplay", "Realism" ],
+	"ignore"	:
+	[
+		"*.psd",
+		"*.vcproj",
+		"*.svn*"
+	]
+}
