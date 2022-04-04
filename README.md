@@ -20,15 +20,19 @@ This mod allows you to grow weed in DarkRP.
 
 ## Answers to frequently asked questions
 **Q:** How do i change the price?
-**A:** All the configuration for the addon is located in a file called [i]config.lua[/i] inside the autorun folder of the addon.
+
+**A:** All the configuration for the addon is located in a file called config.lua inside the autorun folder of the addon.
 
 **Q:** How do i install this?
+
 **A:** Download the latest release at my GitHub or download it from Steam Workshop and extract it using a GMA Extractor of your choice.
 
 **Q:** Can i use this in my server?
+
 **A:** Yes!
 
 **Q:** Can i modify the source code to my liking?
+
 **A:** Yes!
 
 ## Issues
@@ -37,5 +41,7 @@ If you have encountered an issue create a issue at my GitHub Repo or ask in the 
 
 ## Credits
 Script: me :)
+
 Models: katharsmodels, natar
+
 Materials: katharsmodels, natar
