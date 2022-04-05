@@ -35,7 +35,9 @@ function ENT:AcceptInput(name, activator, caller)
 		if (caller:GetNWBool("GetHasPickup") == true) then
 		caller:SetNWBool("GetHasPickup", false)
 		if (WEED_WANTED) then
-			caller:wanted(caller, "Drug Trafficking", WEED_WANTEDTIME)
+			if (!caller:getDarkRPVar("wanted")) then
+				caller:wanted(caller, "Drug Trafficking", WEED_WANTEDTIME)
+			end
 		end
 		caller:SendLua("local tab = {Color(76, 187, 23,255), [[[ZONE] ]], Color(255,255,255), [[You sold a bag of Weed for ]], Color(76, 187, 23), [["..WEED_PRICE.."$.]] } chat.AddText(unpack(tab))");
 		timer.Simple(0.25, function() self:EmitSound(table.Random(WEED_YESSOUNDS), 100, 100) end);
