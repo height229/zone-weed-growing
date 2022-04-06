@@ -77,11 +77,11 @@ end
 
 function ENT:Touch(toucher)
 	if IsValid(toucher) then
-		if (toucher:GetClass() == "zone_water") and (not self:GetHasWater()) and (self:GetHasDirt()) then
+		if (toucher:GetClass() == "zone_water") and (not self:GetHasWater()) then
 			self:SetHasWater(true)
 			self:EmitSound("fizz.wav")
 			toucher:Remove()
-		elseif (toucher:GetClass() == "zone_weedseed") and (not self:GetHasWeedSeed()) and (self:GetHasDirt()) then
+		elseif (toucher:GetClass() == "zone_weedseed") and (not self:GetHasWeedSeed()) then
 			self:SetHasWeedSeed(true)
 			self:EmitSound("fizz.wav")
 			toucher:Remove()
@@ -90,12 +90,8 @@ function ENT:Touch(toucher)
 			self:EmitSound("fizz.wav")
 			toucher:Remove()
 
-		elseif (self:GetHasDirt()) then
-			if (self:GetHasWeedSeed()) then
-				self:SetModel("models/nater/weedplant_pot_planted.mdl")
-			else
-				self:SetModel("models/nater/weedplant_pot_dirt.mdl")
-			end
+		elseif (self:GetHasDirt() == true) then
+			self:SetModel("models/nater/weedplant_pot_dirt.mdl")
 		end
 	end
 end

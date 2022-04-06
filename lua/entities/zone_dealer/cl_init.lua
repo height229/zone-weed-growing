@@ -36,20 +36,13 @@ function ENT:Draw()
 	local ang = self:GetAngles()
 	local pos = self:GetPos()
 
-	local textAnim = (math.sin(CurTime() * 2.8) * 5)
-
 	ang:RotateAroundAxis(self:GetAngles():Right(), 90)
 	ang:RotateAroundAxis(self:GetAngles():Forward(), 90)
 
 	cam.Start3D2D(pos + ang:Up(), Angle(0, LocalPlayer():EyeAngles().y-90, 90), 0.125)
-	
-		if (WEED_ANIMATE) then
-			draw.SimpleText(WEED_DEALERTEXT,"Mainfont",-10,-640 + textAnim,Color(76, 187, 23),1,1)
-			draw.SimpleText("Press "..string.upper(input.LookupBinding("use")).." to sell weed.","pickupfont",0,-620 + textAnim,Color(255,255,255),1,1)
-		else
-			draw.SimpleText(WEED_DEALERTEXT,"Mainfont",-10,-640,Color(76, 187, 23),1,1)
-			draw.SimpleText("Press "..string.upper(input.LookupBinding("use")).." to sell weed.","pickupfont",0,-620,Color(255,255,255),1,1)
-		end
+
+		draw.SimpleText(WEED_DEALERTEXT,"Mainfont",-10,-640,Color(76, 187, 23),1,1)
+		draw.SimpleText("Press "..string.upper(input.LookupBinding("use")).." to sell weed.","pickupfont",0,-620,Color(255,255,255),1,1)
 
 	cam.End3D2D()
 end

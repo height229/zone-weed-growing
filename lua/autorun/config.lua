@@ -18,9 +18,6 @@ WEED_WANTEDTIME = 120
 -- Drops the players weed on death.
 WEED_DROPONDEATH = true
 
--- Animate the text to move up and down with time.
-WEED_ANIMATE = true
-
 -- The text over the dealer npc.
 WEED_DEALERTEXT = "WEED DEALER"
 
