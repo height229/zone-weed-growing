@@ -41,7 +41,7 @@ function ENT:AcceptInput(name, activator, caller)
 		end
 		caller:SendLua("local tab = {Color(76, 187, 23,255), [[[ZONE] ]], Color(255,255,255), [[You sold a bag of Weed for ]], Color(76, 187, 23), [["..WEED_PRICE.."$.]] } chat.AddText(unpack(tab))");
 		timer.Simple(0.25, function() self:EmitSound(table.Random(WEED_YESSOUNDS), 100, 100) end);
-		caller:addMoney(MOON_PRICE)
+		caller:addMoney(WEED_PRICE)
 	else
 		caller:SendLua("local tab = {Color(76, 187, 23,255), [[[ZONE] ]], Color(255,255,255), [[Fuck off! Bring me some of that good stuff already.]] } chat.AddText(unpack(tab))");
 		timer.Simple(0.25, function() self:EmitSound(table.Random(WEED_NOSOUNDS), 100, 100) end);
